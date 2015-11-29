@@ -15,30 +15,28 @@
   <!-- No Baidu Siteapp-->
   <meta http-equiv="Cache-Control" content="no-siteapp"/>
 
-  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
 
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
-  <link rel="icon" sizes="192x192" href="../images/app-icon72x72@2x.png">
+  <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
 
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
-  <link rel="apple-touch-icon-precomposed" href="../images/app-icon72x72@2x.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
 
   <!-- Tile icon for Win8 (144x144 + tile color) -->
-  <meta name="msapplication-TileImage" content="../images/app-icon72x72@2x.png">
+  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
   <meta name="msapplication-TileColor" content="#0e90d2">
 
-  <link rel="stylesheet" href="../css/amazeui.min.css">
-  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
   <style>
     .history {
-      background: url(../images/line4.png) repeat-x 450px;
-      overflow: hidden;
+      background: url(./images/line4.png) repeat-x 450px;
       position: relative;
-      /*height: 40px;*/
     }
 
     .hope {
@@ -80,9 +78,10 @@
       text-align: left;
     }
 
-    .pagination a {
-      display: inline-block;
-      background: url(../images/icon7.png) no-repeat;
+    .pagination ul li a {
+      position: relative;
+      display: block;
+      background: url(./images/icon7.png) no-repeat;
       width: 25px;
       height: 25px; 
       padding: 0;
@@ -192,18 +191,69 @@
       font-size: 20px;
       font-weight:bold;
     }
+
+    .pagination ul li a:hover {
+      overflow: visible;
+    }
+
+    .pagination ul li a:hover span {
+      bottom: 30px;
+      opacity: 0.9;
+    }
+
+    .pagination ul li a span:after {
+        content: '';
+        position: absolute;
+        bottom: -9px;
+        left: 50%;
+        margin-left: -10px;
+        width: 0;
+        height: 0;
+        border-top: 10px solid rgb(105, 170, 53);
+        border-right: 10px solid rgba(0, 0, 0, 0);
+        border-left: 10px solid rgba(0, 0, 0, 0);
+    }
+
+    .pagination ul li a span {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        margin-left: -60px;
+        padding: 15px;
+        width: 120px;
+        height: auto;
+        border-radius: 5px;
+        background: rgb(105, 170, 53);
+        color: rgb(255, 255, 255);
+        text-align: center;
+        text-indent: 0px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 20px;
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        -webkit-backface-visibility: hidden;
+    }
+
+    .ct-social-profiles {
+      float: none;
+      clear: none;
+      padding: 5px 0px 20px 0px;
+      height: 33px;
+      list-style: none;
+      line-height: 30px;
+    }
   </style>
 
 </head>
 <body>
   <div id="page-wrapper">
-    <section id="one">
+    <section id="one" class="">
         <div class="hope">
           <div class="am-g am-container">
             <div class="am-u-lg-12 hope-img">
-              <a href=http://littergardener.github.io>
-                <img src="../images/photo.png" alt="">
-              </a>
+              <img src="./images/photo.png" alt="">
               <div class="fontsize">小园丁007</div>
               <p class="detail-p">
               热爱生活，从事过一段时间的软件测试工作。被前端的各种炫酷效果所吸引，转入学习前端技术，希望能够在前端的道路上能够有一番收获。
@@ -246,17 +296,23 @@
         </div>
       </div>
 
-      
-
       <div class="am-g am-container">
         <div class="am-u-lg-12"> 
           <div class="history">
             <div class="pagination">
-              <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+              <ul class="">
+                <li>
+                  <a href="#"><span>通信工程专业</span></a> 
+                </li>
+                <li>
+                  <a href="#"><span>学习了计算机的里面知识并进行实践</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>研究并使用自动化测试框架</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>对前端开发产生浓厚兴趣并进行探索学习</span></a>
+                </li>
               </ul>
             </div>  
           </div>
@@ -267,12 +323,10 @@
         <div class="am-u-lg-12"> 
           
             <div class="pagination detail-mb">
-              <ul>
-                <span>2010-南昌大学</span>
-                <span>2014-学士学位</span>
-                <span>2014-软件测试</span>
-                <span>2015-前端开发</span>
-              </ul>
+              <span>2010-南昌大学</span>
+              <span>2013-软件实习</span>
+              <span>2014-软件测试</span>
+              <span>2015-前端开发</span>
             </div>  
           
         </div>
@@ -344,7 +398,7 @@
                         <a href="" class="am-icon-btn am-icon-btn-sm am-warning am-icon-google"></a>
                         <a href="https://www.linkedin.com/in/%E5%9B%AD-%E6%A2%81-90bb35104" class="am-icon-btn am-icon-btn-sm am-secondary am-icon-linkedin"></a>
                         <a href="https://github.com/litterGardener" class="am-icon-btn am-icon-btn-sm am-icon-github"></a>
-                        <a href="http://stackoverflow.com/users/5027622/yuan-liang" class="am-icon-btn am-icon-btn-sm am-primary am-icon-stack-overflow"></a>
+                        <a href="" class="am-icon-btn am-icon-btn-sm am-primary am-icon-qq"></a>
                         <a href="" class="am-icon-btn am-icon-btn-sm am-danger am-icon-trello"></a>
                       </div>
                     </div>
@@ -611,6 +665,6 @@
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
 <script src="assets/js/amazeui.ie8polyfill.min.js"></script>
 <![endif]-->
-<script src="../js/amazeui.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
 </body>
 </html>
